@@ -3,7 +3,7 @@ import Head from 'next/head';
 import utilStyles from '../../styles/utils.module.css';
 import styles from '../../styles/Home.module.css';
 import Link from 'next/link';
-import Date from '../components/date';
+import Dates from '../components/date';
 
 export async function getStaticProps({ params }) {
     // Add the "await" keyword like this:
@@ -32,7 +32,7 @@ export async function getStaticPaths() {
         <article>
           <h1 className={utilStyles.headingXl}>{postData.title}</h1>
           <div className={utilStyles.lightText}>
-            <Date dateString={postData.date} />
+            <Dates dateString={postData.date} />
           </div>
           <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
         </article>
