@@ -3,6 +3,8 @@ import Head from 'next/head';
 import utilStyles from '../../styles/utils.module.css';
 import styles from '../../styles/Home.module.css';
 import Link from 'next/link';
+import Date from '../components/date';
+
 export async function getStaticProps({ params }) {
     // Add the "await" keyword like this:
     const postData = await getPostData(params.id);
